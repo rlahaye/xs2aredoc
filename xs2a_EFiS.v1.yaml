@@ -11,10 +11,10 @@ info:
   license:
     name: EFiS
     url: 'http://efis.de'
-  x-logo:
-    url: 'http://efis.de/wp-content/uploads/2018/08/efis_logo_rgb_115_70.jpg'
-    backgroundColor: f9faf9
-    altText: EFiS AG logo
+ # x-logo:
+  #  url: 'http://efis.de/wp-content/uploads/2018/08/efis_logo_rgb_115_70.jpg'
+   # backgroundColor: f9faf9
+   # altText: EFiS AG logo
 servers:
   - url: 'https://api-sandbox.efis.de/v1'
 paths:
