@@ -252,7 +252,7 @@ paths:
         If the DELETE is sufficient for cancelling the payment: HTTP response code 204.
         If the DELETE is not sufficient for cancelling the payment since an authorisation of the cancellation by the PSU is needed: HTTP response code 202.
       parameters:
-        - $ref: './berlingroup.yaml#/components/parameters/X-Request-ID'
+        - $ref: './ReusableHeaderParameters.v1.yaml#/components/parameters/X-Request-ID'
       tags:
         - PIS
         - Payment Cancellation Request
@@ -461,7 +461,7 @@ paths:
                 type: object
                 properties:
                   access:
-                    $ref: './berlingroup.yaml#/components/schemas/Account Access'
+                    $ref: '#/components/schemas/AccountAccess'
                   recurringIndicator:
                     type: boolean
                   validUntil:
