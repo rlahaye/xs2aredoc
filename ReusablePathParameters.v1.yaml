@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: Reusable Path Parameters
+  version: "1.0"
+  description: Berlin Group NextGenPSD2– Version 1.3.4
+components:
+  parameters:
+    AccountID:
+      in: path
+      description: 'This identification is denoting the addressed account. The account-id is retrieved by using a "Read Account List" call. The account-id is the "resourceId" attribute of the account structure. Its value is constant at least throughout the lifecycle of a given consent.'
+      name: account-Id
+      required: true
+      schema:
+        type: string
+    TransactionID:
+      in: path
+      description: 'This identification is given by the attribute transactionId of the corresponding entry of a transaction list.'
+      name: transactionId
+      required: true
+      schema:
+        type: string
+    PaymentID:
+      in: path
+      description: 'Resource Identification of the related payment.'
+      name: paymentId
+      required: true
+      schema:
+        type: string
+    PaymentProduct:
+      schema:
+        type: string
+        enum:
+          - sepa-credit-transfers
+          #- instant-sepa-credit-transfers
+          #- target-2-payments
+          #- cross-border-credit-transfers
+      name: payment-product
+      in: path
+      required: true
+    PaymentService:
+      schema:
+          type: string
+          enum:
+            - payments
+            - bulk-payments
+            - periodic-payments
+      name: payment-service
+      in: path
+      required: true
+    ConsentID:
+      in: path
+      description: 'The consent identification assigned to the created resource.'
+      name: consentId
+      required: true
+      schema:
+        type: string

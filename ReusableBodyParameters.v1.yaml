@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Reusable Body Parameters
+  version: "1.0"
+  description: Berlin Group NextGenPSD2– Version 1.3.4
+components:
+  ConsentStatus:
+    title: ConsentStatus
+    type: object
+      properties:
+        consentStatus:
+          type: string
+          description: 'This is the overall lifecycle status of the consent.'
+          enum:
+            - received
+            - rejected
+            - partiallyAuthorised
+            - valid
+            - revokedByPsu
+            - expired
+            - terminatedByTpp
